@@ -4,14 +4,14 @@
 
     app.config(function($routeProvider){
     	$routeProvider.when("/user/:username", {
-    		templateUrl: "user.html",
+    		templateUrl: "views/user.html",
     		controller: "UserController"
     	})
     	.when("/repo/:username/:repo", {
-    		templateUrl: "repo.html",
+    		templateUrl: "views/repo.html",
     		controller: "RepoController"
     	})
-    	.otherwise({redirectTo: "/main"});
+    	.otherwise({redirectTo: "/"});
     });
 
 }());
