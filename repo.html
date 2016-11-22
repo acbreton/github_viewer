@@ -1,0 +1,16 @@
+<p>Issues: {{repo.open_issues_count}}</p>
+{{error}}
+<table>
+    <thead>
+        <tr>
+            <th>Profile Image</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in repoDetail track by $index">
+            <td><img style="width: 100px; height: 100px;" ng-src="{{user.avatar_url}}"/></td>
+            <td style="text-align: center;">{{user.login}}</td>
+        </tr>
+    </tbody>
+</table>
