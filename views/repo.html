@@ -1,16 +1,33 @@
-<p>Issues: {{repo.open_issues_count}}</p>
 {{error}}
-<table>
-    <thead>
-        <tr>
-            <th>Profile Image</th>
-            <th>Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="user in repoDetail track by $index">
-            <td><img style="width: 100px; height: 100px;" ng-src="{{user.avatar_url}}"/></td>
-            <td style="text-align: center;">{{user.login}}</td>
-        </tr>
-    </tbody>
-</table>
+
+<h1 class="center">{{repo.name}}</h1>
+
+<div class="repoInfo">
+    <div class="row">
+        <div class="col-sm-4 center">
+            <h4>Description</h4>
+            <p>{{repo.description}}</p>
+        </div>
+        <div class="col-sm-4 center">
+            <h4>Created</h4>
+            <p>{{repo.created_at | date}}</p>
+            <button type="submit" class="btn btn-default" ng-click="goBack(repo.owner.login)">Go Back</button>
+        </div>
+        <div class="col-sm-4 center">
+            <h4>Last Updated</h4>
+            <p>{{repo.updated_at | date}}</p>
+        </div>
+    </div>
+    <hr>
+    <h3 class="center">Contributors</h3>
+    <div ng-repeat="user in repoDetail">
+        <div class="clearfix contributorRow" ng-if="$index % 3 == 0"></div>
+        <div class="col-sm-4 center">
+            <a href="#/user/{{user.login}}">
+                <img style="width: 100px; height: 100px;" ng-src="{{user.avatar_url}}"/>
+                <br/>
+                {{user.login}}
+            </a>
+        </div>
+    </div>
+</div>

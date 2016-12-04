@@ -10,6 +10,18 @@ tr {
     position:absolute;
 }
 
+.repoInfo {
+	margin: 15px;
+}
+
+.contributorRow {
+	padding-bottom: 25px;
+}
+
+.center {
+	text-align: center;
+}
+
 .repos {
 	height: auto;
     padding: 20px;

@@ -6,7 +6,6 @@
 
         $scope.search = function(username) {
             $location.path("/user/" + username);
-            console.log(username);
         };
 
         $scope.username = "";

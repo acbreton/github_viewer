@@ -20,6 +20,10 @@
             $scope.error = "Could not fetch the data.";
         };
 
+        $scope.goBack = function(user) {
+            $location.path("/user/" + user);
+        }
+
         $scope.repo = $routeParams.repo;
         $scope.username = $routeParams.username;
         $location.path("/repo/"+ $scope.username +"/"+ $scope.repo);

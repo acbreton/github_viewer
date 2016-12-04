@@ -10,6 +10,7 @@
                 <option value="-stargazers_count">Stars</option>
                 <option value="+language">Language</option>
                 <option value="-size">Size</option>
+                <option value="-open_issues_count">Issues</option>
             </select>
         </div>
     </div>
@@ -21,6 +22,7 @@
                     <th>Stars</th>
                     <th>Language</th>
                     <th>Size</th>
+                    <th>Issues</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +31,7 @@
                     <td>{{repo.stargazers_count | number}}</td>
                     <td>{{repo.language}}</td>
                     <td>{{repo.size | number}} KB</td>
+                    <td>{{repo.open_issues_count | number}}</td>
                 </tr>
             </tbody>
         </table>
