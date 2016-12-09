@@ -2,7 +2,7 @@
 
     var app = angular.module("githubViewer");
 
-    var UserController = function($scope, github, $routeParams, $location) {
+    var UserController = function($scope, github, $routeParams, $location, $rootScope) {
 
         var onUserComplete = function(data) {
             $scope.user = data;
@@ -17,6 +17,7 @@
             $scope.error = "Could not fetch the data.";
         };
 
+        $rootScope.main = false;
         $scope.username = $routeParams.username;
         $location.path("/user/" + $scope.username);
         $scope.repoSortOrder = "-stargazers_count";

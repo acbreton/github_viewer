@@ -11,7 +11,10 @@
     		templateUrl: "views/repo.html",
     		controller: "RepoController"
     	})
-    	.otherwise({redirectTo: "/"});
+    	.otherwise({
+            redirectTo: "/",
+            templateUrl: "views/home.html"
+        });
     });
 
 }());

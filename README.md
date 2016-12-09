@@ -10,3 +10,5 @@ Currently,  this app grabs a user from a search query to the GitHub API and cons
 After clicking on a given repo, the app displays who has contributed to the project.
 
 Thanks for watching and stay tuned for the next update!
+
+Initial Template Derivative By: HTML5UP! https://html5up.net/ 

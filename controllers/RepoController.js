@@ -2,7 +2,7 @@
 
     var app = angular.module("githubViewer");
 
-    var RepoController = function($scope, github, $routeParams, $location) {
+    var RepoController = function($scope, github, $routeParams, $location, $rootScope) {
 
         var onRepoDetailComplete = function(data) {
             $scope.repoDetail = data;
@@ -24,6 +24,7 @@
             $location.path("/user/" + user);
         }
 
+        $rootScope.main = false;
         $scope.repo = $routeParams.repo;
         $scope.username = $routeParams.username;
         $location.path("/repo/"+ $scope.username +"/"+ $scope.repo);

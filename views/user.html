@@ -1,10 +1,10 @@
-<div id="userDetails" class="mainContent">
+<div id="userDetails" class="view mainContent">
     <div class="userInfo">
-        <h2>{{user.name}}</h2>
-        <img class="userPhoto" style="width: 200px; height: 200px;" ng-src="{{user.avatar_url}}" title="{{user.name}}"/>
+        <h2 class="center">{{user.name}}</h2>
+        <img class="userPhoto img-circle" style="width: 200px; height: 200px;" ng-src="{{user.avatar_url}}" title="{{user.name}}"/>
         <br/>
         <div class="sort">
-            <h4 class="orderText">Order By:</h4>
+            <h4 class="orderText center">Order By:</h4>
             <select class="sortBar form-control" ng-model="repoSortOrder">
                 <option value="+name">Name</option>
                 <option value="-stargazers_count">Stars</option>
